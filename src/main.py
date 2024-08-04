@@ -12,7 +12,6 @@ from typing import List, Dict, Any
 
 # Import required libraries
 import qiskit
-from qiskit import __qiskit_version__
 import pennylane as qml
 import qoqo_quest
 from qoqo_quest import __version__ as qoqo_quest_version
