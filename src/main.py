@@ -21,7 +21,7 @@ import qecsim
 from qecsim import __version__ as qecsim_version
 
 # Check versions
-assert qiskit.__version__ == '0.44.1', "Qiskit version 0.44.1 is required"
+assert qiskit.__version__ == '1.1.1', "Qiskit version 1.1.1 is required"
 assert qecsim_version >= '1.0', "qecsim version 1.0 or higher is required"
 
 # Abstract base classes for quantum components
