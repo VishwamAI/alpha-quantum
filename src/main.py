@@ -14,7 +14,6 @@ from typing import List, Dict, Any
 import qiskit
 import pennylane as qml
 import qoqo_quest
-from qoqo_quest import __version__ as qoqo_quest_version
 # import tensorflow_quantum as tfq  # Commented out for testing other components
 import liboqs
 import pymatching
@@ -22,8 +21,7 @@ import qecsim
 from qecsim import __version__ as qecsim_version
 
 # Check versions
-assert __qiskit_version__['qiskit'] == '0.44.1', "Qiskit version 0.44.1 is required"
-assert qoqo_quest_version >= '0.5.0', "qoqo_quest version 0.5.0 or higher is required"
+assert qiskit.__version__ == '0.44.1', "Qiskit version 0.44.1 is required"
 assert qecsim_version >= '1.0', "qecsim version 1.0 or higher is required"
 
 # Abstract base classes for quantum components
