@@ -19,6 +19,7 @@ import liboqs
 import pymatching
 import qecsim
 from qecsim import __version__ as qecsim_version
+from quantum_model import QuantumOptimization
 
 # Check versions
 assert qiskit.__version__ == '1.1.1', "Qiskit version 1.1.1 is required"
@@ -153,6 +154,7 @@ class QuantumComputingModel:
         self.plugin_manager.register_plugin("ml", QuantumMachineLearning())
         self.plugin_manager.register_plugin("crypto", QuantumCryptography())
         self.plugin_manager.register_plugin("qec", QuantumErrorCorrection())
+        self.plugin_manager.register_plugin("optimization", QuantumOptimization(n_qubits=4))
 
     def run_component(self, name: str, *args, **kwargs):
         component = self.plugin_manager.get_plugin(name)
@@ -183,6 +185,11 @@ def main():
     print("\nRunning Surface Code Error Correction:")
     result = quantum_model.run_component("qec", "surface_code", 3)
     print(f"Error Correction Success: {result}")
+
+    print("\nRunning Quantum Optimization:")
+    problem_hamiltonian = qml.Hamiltonian([1, 1], [qml.PauliZ(0) @ qml.PauliZ(1), qml.PauliZ(2) @ qml.PauliZ(3)])
+    result = quantum_model.run_component("optimization", problem_hamiltonian, p=2)
+    print(f"Optimization Result: Optimal parameters = {result[0]}, Minimum cost = {result[1]}")
 
 if __name__ == "__main__":
     main()
