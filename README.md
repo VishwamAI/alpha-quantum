@@ -58,7 +58,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 For support or inquiries, please contact the project maintainers:
 
-- John Doe: john.doe@example.com
-- Jane Smith: jane.smith@example.com
-
+- kasinadhsarma: kasinadhsarma.in
+- gmail: kasinadhsarma@gmail.com
 You can also open an issue on our GitHub repository for bug reports or feature requests.
