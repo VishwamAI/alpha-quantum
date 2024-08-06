@@ -59,5 +59,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For support or inquiries, please contact the project maintainers:
 
 - kasinadhsarma: kasinadhsarma.in
-- gmail: kasinadhsarma@gmail.com
+- Gmail: kasinadhsarma@gmail.com
+  
 You can also open an issue on our GitHub repository for bug reports or feature requests.
